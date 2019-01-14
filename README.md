@@ -4,4 +4,4 @@ An example configuration repository for [swarm-sync](https://github.com/kevb/swa
 
 # Bump
 
-Bumpable number to trigger change: 1
+Bumpable number to trigger change: 2
