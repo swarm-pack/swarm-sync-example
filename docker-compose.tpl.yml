@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   swarm-sync:
-    image: nginx/nginx:{{ nginx_tag }}
+    image: nginx:{{ nginx_tag }}
     deploy:
       labels:
         - "swarm-sync.managed=true"
