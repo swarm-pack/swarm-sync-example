@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  swarm-sync:
+    image: nginx/nginx:{{ nginx_tag }}
+    deploy:
+      labels:
+        - "swarm-sync.managed=true"
+        - "swarm-sync.image-pattern=local"
