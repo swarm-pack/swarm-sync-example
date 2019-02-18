@@ -1,0 +1,9 @@
+---
+
+packs:
+  - pack: nginx
+    image:
+      automated: true
+      image-pattern: local
+    values:
+      nginx_tag: latest
