@@ -6,4 +6,4 @@ services:
     deploy:
       labels:
         - "swarm-sync.managed=true"
-        - "swarm-sync.image-pattern=local"
+        - "swarm-sync.image-pattern=1.*.*"
