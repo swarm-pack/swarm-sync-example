@@ -4,6 +4,6 @@ packs:
   - pack: nginx
     image:
       automated: true
-      image-pattern: "1.*.*"
+      image-pattern: "1.14.*"
     values:
       nginx_tag: "1.14.2"
