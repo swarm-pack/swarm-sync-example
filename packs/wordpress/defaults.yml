@@ -1,0 +1,17 @@
+mysql:
+  image:
+    repository: nginx
+    tag: 5.7
+    tag_pattern: 5.7
+    auto: true
+  root_password: changemeroot
+
+wordpress:
+  image:
+    repository: wordpress
+    tag: latest
+    auto: true
+
+user: wp
+password: changeme
+database: wordpress
