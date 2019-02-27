@@ -11,6 +11,9 @@ services:
       labels:
         - "swarm-sync.managed=true"
         - "swarm-sync.image-pattern={{ image.tag_pattern }}"
+      placement:
+        constraints:
+          - node.role == manager
     secrets:
       - source: {{ secret_from_file("swarm-sync.yml") }}
         target: /etc/swarm-sync.yml
