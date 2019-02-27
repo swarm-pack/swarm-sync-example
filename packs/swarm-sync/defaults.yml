@@ -1,0 +1,6 @@
+---
+image:
+  repository: kevbuk/swarm-sync
+  tag: latest
+  tag_pattern: latest
+  auto: true

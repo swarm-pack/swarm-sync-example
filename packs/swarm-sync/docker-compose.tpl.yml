@@ -1,0 +1,18 @@
+---
+version: '3.3'
+
+services:
+  swarm-sync:
+    image: "{{ image.repository }}:{{ image.tag }}"
+    volumes:
+      - swarm_sync_storage:/run/swarm-sync
+    deploy:
+      labels:
+        - "swarm-sync.managed=true"
+        - "swarm-sync.image-pattern={{ image.tag_pattern }}"
+    secrets:
+      - source: {{ secret_from_file("swarm-sync.yml") }}
+        target: /etc/swarm-sync.yml
+
+volumes:
+  swarm_sync_storage: {}
