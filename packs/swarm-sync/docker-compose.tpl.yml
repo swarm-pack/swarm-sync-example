@@ -6,6 +6,7 @@ services:
     image: "{{ image.repository }}:{{ image.tag }}"
     volumes:
       - swarm_sync_storage:/run/swarm-sync
+      - /var/run/docker.sock:/var/run/docker.sock
     deploy:
       labels:
         - "swarm-sync.managed=true"
