@@ -22,9 +22,6 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: {{ wordpress.user }}
       WORDPRESS_DB_PASSWORD: {{ password }}
-    secrets:
-      - source: {{ secret_from_file("my_secret_data_2") }}
-        target: my_secret
     deploy:
       labels:
         - "swarm-sync.managed=true"
