@@ -9,12 +9,13 @@ packs:
           tag: "5.6"
           tag_pattern: "glob:5.*"
         root_password: changemeroot
-
       wordpress:
         image:
           repository: wordpress
           tag: latest
-
       user: wp
       password: changeme
       database: wordpress
+
+  - pack: swarm-sync
+    values:
