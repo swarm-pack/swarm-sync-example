@@ -15,7 +15,7 @@ services:
         constraints:
           - node.role == manager
     secrets:
-      - source: {{ secret_from_file("swarm-sync.yml") }}
+      - source: {{ secret_from_value("swarm_sync_yml") }}
         target: /etc/swarm-sync.yml
 
 volumes:
