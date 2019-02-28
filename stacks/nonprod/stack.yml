@@ -18,4 +18,5 @@ packs:
       database: wordpress
 
   - pack: swarm-sync
-    values:
+
+  - pack: portainer
