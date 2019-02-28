@@ -8,6 +8,9 @@ services:
       labels:
         - "swarm-sync.managed=true"
         - "swarm-sync.image-pattern={{ image.tag_pattern }}"
+      placement:
+        constraints:
+          - node.role == manager
     ports:
       - 9000:9000
     volumes:
