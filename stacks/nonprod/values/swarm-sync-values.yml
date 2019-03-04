@@ -1,0 +1,11 @@
+tag: latest
+swarm_sync_yml: |
+  swarm-sync:
+    stacks:
+      - nonprod
+    updateInterval: 300000 # 5 minutes
+    git:
+      url: https://github.com/kevb/swarm-sync-example
+      branch: master
+    docker:
+      socketPath: /var/run/docker.sock

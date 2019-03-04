@@ -1,13 +1,14 @@
 ---
-
 packs:
+  # Using a pack found within the config repo in /packs/wordpress
   - pack: wordpress
+    # Values can be included here
     values:
       mysql:
         image:
           repository: mysql # format: registry.custom.com/me/my_image || me/my_image || myimage
           tag: "5.6"
-          tag_pattern: "glob:5.*"
+          tag_pattern: "glob:5.*" # image: {tag_pattern: ...} will be used by swarm-sync to find the newest matching tag from registry
         root_password: changemeroot
       wordpress:
         image:
@@ -17,18 +18,10 @@ packs:
       password: changeme
       database: wordpress
 
+    # Using a pack from the official "incubator" repo
   - pack: incubator/swarm-sync
-    values:
-      swarm_sync_yml: |
-        swarm-sync:
-          stacks:
-            - nonprod
-          updateInterval: 300000 # 5 minutes
-          git:
-            url: https://github.com/kevb/swarm-sync-example
-            branch: master
-          docker:
-            socketPath: /var/run/docker.sock
-
+    # Alternative to values, we can load values from a file in stacks/[stack]/values/ using values_file
+    values_file: swarm-sync-values.yml
 
   - pack: incubator/portainer
+    # Accept all the defaults from the pack, override no values
