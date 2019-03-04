@@ -31,4 +31,4 @@ packs:
             socketPath: /var/run/docker.sock
 
 
-  - pack: portainer
+  - pack: incubator/portainer
