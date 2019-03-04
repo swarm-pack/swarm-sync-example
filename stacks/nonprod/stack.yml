@@ -17,7 +17,7 @@ packs:
       password: changeme
       database: wordpress
 
-  - pack: swarm-sync
+  - pack: incubator/swarm-sync
     values:
       swarm_sync_yml: |
         swarm-sync:
