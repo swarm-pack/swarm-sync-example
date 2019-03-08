@@ -19,9 +19,9 @@ packs:
       database: wordpress
 
     # Using a pack from the official "incubator" repo
-  - pack: incubator/swarm-sync
+  - pack: official/incubator/swarm-sync
     # Alternative to values, we can load values from a file in stacks/[stack]/values/ using values_file
     values_file: swarm-sync-values.yml
 
-  - pack: incubator/portainer
+  - pack: official/incubator/portainer
     # Accept all the defaults from the pack, override no values
