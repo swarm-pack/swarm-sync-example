@@ -1,4 +1,3 @@
-tag: latest
 swarm_sync_yml: |
   swarm-sync:
     stacks:
