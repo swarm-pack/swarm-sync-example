@@ -1,0 +1,5 @@
+release_name: portainer
+pack: 
+  repository: official/incubator
+  name: portainer
+  version: 1.20.3
