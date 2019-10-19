@@ -1,18 +1,19 @@
-- release_name: wordpress
-  pack: 
-    path: packs/wordpress
-  # Values can be included here
-  values:
-    mysql:
-      image:
-        repository: mysql # format: registry.custom.com/me/my_image || me/my_image || myimage
-        tag: "5.7"
-        tag_pattern: "semver:>=5.7.10" # image: {tag_pattern: ...} will be used by swarm-sync to find the newest matching tag from registry
-      root_password: changemeroot
-    wordpress:
-      image:
-        repository: wordpress
-        tag: latest
-    user: wp
-    password: changeme
-    database: wordpress
+---
+release_name: wordpress
+pack: 
+  path: packs/wordpress
+# Values can be included here
+values:
+  mysql:
+    image:
+      repository: mysql # format: registry.custom.com/me/my_image || me/my_image || myimage
+      tag: "5.7"
+      tag_pattern: "semver:>=5.7.10" # image: {tag_pattern: ...} will be used by swarm-sync to find the newest matching tag from registry
+    root_password: changemeroot
+  wordpress:
+    image:
+      repository: wordpress
+      tag: latest
+  user: wp
+  password: changeme
+  database: wordpress
